@@ -23,6 +23,12 @@ class MainActivity : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
 
+        binding.textLoginId.setOnClickListener {
+            val intent = Intent(this,Login::class.java)
+            startActivity(intent)
+        }
+
+
         binding.signupBtn.setOnClickListener {
             val email = binding.emailEditeText.text.toString()
             val pass = binding.passEditeText.text.toString()
