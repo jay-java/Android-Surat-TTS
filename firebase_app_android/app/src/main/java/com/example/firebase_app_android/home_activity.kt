@@ -48,6 +48,12 @@ class home_activity : AppCompatActivity() {
             Toast.makeText(this,"MSG",Toast.LENGTH_SHORT).show()
         }
 
+
+        binding.insertBTN.setOnClickListener {
+            val intent = Intent(this,add_data::class.java)
+            startActivity(intent)
+        }
+
         binding.logoutBtn.setOnClickListener {
             firebaseAuth.signOut()
 
