@@ -54,6 +54,11 @@ class home_activity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.fetchBTN.setOnClickListener {
+            val intent = Intent(this,fetch_data::class.java)
+            startActivity(intent)
+        }
+
         binding.logoutBtn.setOnClickListener {
             firebaseAuth.signOut()
 
